@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <h1 class="text-center text-4xl font-bold mt-4">Question</h1>
+    <div>
+        <div>
+            <p class="text-2xl text-center font-bold bg-slate-300  border-b-2 border-black w-3/4 mx-auto mt-4 h-12">Do you know who i am? <button class="relative right-[-417px]">
+                <span id="" class="Btn ">+</span>
+            <span id="" class="rev hidden">-</span>
+            </button></p>
+            <div id="" class="hid hidden"><p class="text-center w-3/4 mx-auto mt-2 bg-orange-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tempore dolorem perferendis excepturi facere fugiat officiis illo enim consectetur maiores suscipit perspiciatis totam harum ad ducimus, eaque vero dignissimos ea soluta obcaecati quod dolor? Earum esse cumque eaque ipsa perferendis nisi ipsam necessitatibus ducimus quas.</p></div>
+
+           
+        </div>
+    </div>
+    <div>
+        <div>
+            <p class="text-2xl text-center font-bold bg-slate-300  border-b-2 border-black w-3/4 mx-auto mt-4 h-12">Do you know who i am? <button class="relative right-[-417px]">
+                <span id="" class="Btn ">+</span>
+            <span id="" class="rev hidden">-</span>
+            </button></p>
+            <div id="" class="hid hidden"><p class="text-center w-3/4 mx-auto mt-2 bg-orange-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tempore dolorem perferendis excepturi facere fugiat officiis illo enim consectetur maiores suscipit perspiciatis totam harum ad ducimus, eaque vero dignissimos ea soluta obcaecati quod dolor? Earum esse cumque eaque ipsa perferendis nisi ipsam necessitatibus ducimus quas.</p></div>
+
+           
+        </div>
+    </div>
+    <div>
+        <div>
+            <p class="text-2xl text-center font-bold bg-slate-300  border-b-2 border-black w-3/4 mx-auto mt-4 h-12">Do you know who i am? <button class="relative right-[-417px]">
+                <span id="" class="Btn ">+</span>
+            <span id="" class="rev hidden">-</span>
+            </button></p>
+            <div id="" class="hid hidden"><p class="text-center w-3/4 mx-auto mt-2 bg-orange-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tempore dolorem perferendis excepturi facere fugiat officiis illo enim consectetur maiores suscipit perspiciatis totam harum ad ducimus, eaque vero dignissimos ea soluta obcaecati quod dolor? Earum esse cumque eaque ipsa perferendis nisi ipsam necessitatibus ducimus quas.</p></div>
+
+           
+        </div>
+    </div>
+</body>
+<script>
+
+//     let Buttons = document.querySelectorAll('button')
+//     Buttons.forEach(button => {
+       
+//         let Btn = button.querySelector('.Btn')
+//     let hid = button.querySelector('.hid')
+//     let rev = button.querySelector('.rev')
+//  let buttonAdd = Btn.addEventListener('click',()=>{
+//     hid.classList.remove('hidden')
+//     rev.classList.remove('hidden')
+//     hid.classList.add('block')
+//     Btn.classList.add('hidden')
+// })
+//  let buttonRemove = rev.addEventListener('click',()=>{
+//      hid.classList.remove('block')
+//      rev.classList.remove('block')
+//      Btn.classList.remove('hidden')
+//     hid.classList.add('hidden')
+//     Btn.classList.add('block')
+//     rev.classList.add('hidden')
+   
+// })
+
+//     });
+    
+
+
+let buttons = document.querySelectorAll('button');
+
+buttons.forEach(button => {
+    let Btn = button.querySelector('.Btn');
+    let rev = button.querySelector('.rev');
+    let hid = button.closest('div').querySelector('.hid');
+
+    // Show content and change button
+    Btn.addEventListener('click', () => {
+        hid.classList.remove('hidden', 'opacity-0');
+        hid.classList.add('block', 'opacity-100');
+        Btn.classList.add('hidden');
+        rev.classList.remove('hidden');
+    });
+
+    // Hide content and reset button
+    rev.addEventListener('click', () => {
+        hid.classList.remove('block', 'opacity-100');
+        hid.classList.add('hidden', 'opacity-0');
+        rev.classList.add('hidden');
+        Btn.classList.remove('hidden');
+    });
+});
+
+</script>
+</html>
